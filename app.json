@@ -16,7 +16,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "edgeToEdgeEnabled": true,
+      "package": "com.anonymous.vision"
     },
     "web": {
       "bundler": "metro",
@@ -33,7 +38,15 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+      "react-native-vision-camera",
+      {
+        "cameraPermissionText": "vision needs access to your Camera.",
+        "enableMicrophonePermission": true,
+        "microphonePermissionText": "vision needs access to your Microphone."
+      }
+    ]
     ],
     "experiments": {
       "typedRoutes": true
